@@ -8,6 +8,18 @@ This repository implements an **untargeted FGSM adversarial attack** on a ResNet
 - Applies **FGSM untargeted attack** to test images
 - Compares **clean accuracy** and **adversarial accuracy**
 
+## Model Architecture
+
+We used the **ResNet-18** model provided by `torchvision.models`.
+
+```python
+from torchvision.models import resnet18
+model = resnet18(weights=None)
+model.fc = nn.Linear(model.fc.in_features, 10)
+
+Source: https://pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html
+
+
 ## FGSM Attack Details
 
 - Attack type: Untargeted
