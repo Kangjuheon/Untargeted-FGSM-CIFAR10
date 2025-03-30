@@ -62,7 +62,7 @@ if __name__ == "__main__":
     test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
 
     # ResNet18
-    model = resnet18(weights=None)
+    model = models.resnet18(weights=None)
     model.fc = nn.Linear(model.fc.in_features, 10)
     model = model.to(device)
 
