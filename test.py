@@ -2,7 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from torchvision import datasets, transforms, models
+from torchvision import datasets, transforms
+from torchvision.models import resnet18
 from torch.utils.data import DataLoader
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
